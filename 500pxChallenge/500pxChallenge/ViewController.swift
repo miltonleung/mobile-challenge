@@ -11,10 +11,13 @@ import UIKit
 final class ViewController: UIViewController {
 
   @IBOutlet fileprivate var collectionView: UICollectionView!
+  @IBOutlet fileprivate var activityIndicator: UIActivityIndicatorView!
   
   fileprivate var popularPhotos = [Photo]() {
     didSet {
-      collectionView.reloadData()
+      DispatchQueue.main.async() {
+        self.collectionView.reloadData()
+      }
     }
   }
   
