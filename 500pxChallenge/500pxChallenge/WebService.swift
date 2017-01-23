@@ -29,7 +29,7 @@ public final class WebService {
       case .PopularPhotos:
         return baseURL + "photos?feature=popular&" + auth
       case .PhotoByID(let id):
-        return baseURL + "photos/?\(id)" + auth
+        return baseURL + "photos/\(id)?" + auth
       }
     }
   }
@@ -37,6 +37,7 @@ public final class WebService {
   public static func request(endpoint: Endpoints, completion: @escaping ([String: Any]?) -> Void) {
     let session = URLSession(configuration: .default)
     var request = URLRequest(url: URL(string: endpoint.path)!)
+    print(endpoint.path)
     request.httpMethod = endpoint.method
     
     session.dataTask(with: request) { (data, response, error) in

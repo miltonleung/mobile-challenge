@@ -18,7 +18,7 @@ final class ViewController: UIViewController {
     }
   }
   
-  fileprivate var selectedPhoto: Photo?
+  fileprivate var selectedPhoto: Int?
 }
 
 // MARK: Life Cycle
@@ -44,8 +44,17 @@ extension ViewController {
 
 // MARK - Segues
 extension ViewController {
-  enum segues: String {
-    case 
+  enum SegueIdentifier: String {
+    case fullImage
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    switch SegueIdentifier(rawValue: segue.identifier!)! {
+    case .fullImage:
+      let imagePage = segue.destination as! ImagePageViewController
+      imagePage.popularPhotos = popularPhotos
+      imagePage.startingIndex = selectedPhoto
+    }
   }
 }
 
@@ -70,7 +79,8 @@ extension ViewController: UICollectionViewDelegate {
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    selectedPhoto = popularPhotos[indexPath.item[]
+    selectedPhoto = indexPath.item
+    self.performSegue(withIdentifier: SegueIdentifier.fullImage.rawValue, sender: nil)
   }
 }
 

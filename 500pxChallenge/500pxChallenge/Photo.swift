@@ -37,9 +37,11 @@ extension Photo {
   }
   
   mutating func update(dictionary: [String: Any]) {
-    if let images = dictionary["images"] as? [String: Any] {
-      if images["size"] as! Int == 4 {
-        self.imageURL = images["https_url"] as? String
+    if let images = dictionary["images"] as? [[String: Any]] {
+      for image in images {
+        if image["size"] as! Int == 4 {
+          self.imageURL = image["https_url"] as? String
+        }
       }
     }
   }

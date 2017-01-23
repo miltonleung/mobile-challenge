@@ -71,11 +71,52 @@
                     <navigationItem key="navigationItem" title="Popular Photos" id="VwQ-ao-gWo"/>
                     <connections>
                         <outlet property="collectionView" destination="9e6-eZ-MyN" id="Qhr-JR-si2"/>
+                        <segue destination="wG0-u8-t4n" kind="show" identifier="fullImage" id="Rv5-FH-1Pg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+        <!--Image Page View Controller-->
+        <scene sceneID="wPB-GM-YA9">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="wG0-u8-t4n" customClass="ImagePageViewController" customModule="_00pxChallenge" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ba6-pQ-eQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791" y="124"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="eMi-fZ-TEp">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="TW0-ak-sCF" customClass="ImageViewController" customModule="_00pxChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGo-RX-FFy"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSF-AO-Txi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I25-NF-ckj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-xC-ayj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wjK-xC-ayj" secondAttribute="trailing" id="BSk-Ea-eZl"/>
+                            <constraint firstItem="bSF-AO-Txi" firstAttribute="top" secondItem="wjK-xC-ayj" secondAttribute="bottom" id="Ko7-Es-Lru"/>
+                            <constraint firstItem="wjK-xC-ayj" firstAttribute="leading" secondItem="I25-NF-ckj" secondAttribute="leading" id="cfw-eS-4uS"/>
+                            <constraint firstItem="wjK-xC-ayj" firstAttribute="top" secondItem="I25-NF-ckj" secondAttribute="top" id="oap-xn-pcC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="wjK-xC-ayj" id="nrC-EU-Ici"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CvO-oz-Gxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2535.1999999999998" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wc6-Af-26R">
