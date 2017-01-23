@@ -102,14 +102,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-xC-ayj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-ro-ssh">
-                                <rect key="frame" x="317" y="579" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-ro-ssh">
+                                <rect key="frame" x="16" y="579" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-Y4-SQY">
-                                <rect key="frame" x="317" y="604" width="42" height="21"/>
+                                <rect key="frame" x="16" y="604" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,7 +121,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="GlI-Y4-SQY" secondAttribute="trailing" id="9Mt-oN-hnh"/>
                             <constraint firstAttribute="trailing" secondItem="wjK-xC-ayj" secondAttribute="trailing" id="BSk-Ea-eZl"/>
                             <constraint firstItem="wjK-xC-ayj" firstAttribute="top" secondItem="cGo-RX-FFy" secondAttribute="bottom" id="DSm-6R-Uh9"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GlI-Y4-SQY" secondAttribute="leading" id="FAJ-yC-fWj"/>
                             <constraint firstItem="bSF-AO-Txi" firstAttribute="top" secondItem="wjK-xC-ayj" secondAttribute="bottom" id="Ko7-Es-Lru"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qxs-ro-ssh" secondAttribute="leading" id="Mw1-YQ-ED4"/>
                             <constraint firstItem="GlI-Y4-SQY" firstAttribute="top" secondItem="qxs-ro-ssh" secondAttribute="bottom" constant="4" id="RTx-EK-ybt"/>
                             <constraint firstItem="wjK-xC-ayj" firstAttribute="leading" secondItem="I25-NF-ckj" secondAttribute="leading" id="cfw-eS-4uS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qxs-ro-ssh" secondAttribute="trailing" id="xej-40-jk1"/>
