@@ -11,11 +11,7 @@ import UIKit
 class PhotoThumbnailCollectionViewCell: UICollectionViewCell {
   static let reuseIdentifier = "\(PhotoThumbnailCollectionViewCell.self)"
   
-  @IBOutlet fileprivate var photo: UIImageView! {
-    didSet {
-      self.photo.contentMode = .scaleAspectFit
-    }
-  }
+  @IBOutlet fileprivate var photo: UIImageView!
   
   var image: Photo! {
     didSet {
@@ -25,7 +21,7 @@ class PhotoThumbnailCollectionViewCell: UICollectionViewCell {
           DispatchQueue.main.async {
             self.photo.image = UIImage(data: data)
           }
-        } catch let error as Error {
+        } catch let error {
           print(error)
         }
       }

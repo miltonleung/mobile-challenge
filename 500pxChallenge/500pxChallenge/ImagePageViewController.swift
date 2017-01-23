@@ -16,7 +16,8 @@ class ImagePageViewController: UIPageViewController {
 extension ImagePageViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.automaticallyAdjustsScrollViewInsets = false
+
     dataSource = self
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
