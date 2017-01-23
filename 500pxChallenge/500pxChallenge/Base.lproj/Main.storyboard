@@ -44,12 +44,10 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="width" relation="lessThanOrEqual" secondItem="Jma-c3-DIU" secondAttribute="width" id="CPW-7u-hEp"/>
-                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="leading" secondItem="Jma-c3-DIU" secondAttribute="leading" id="R7A-4s-HXr"/>
-                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="top" secondItem="Jma-c3-DIU" secondAttribute="top" id="T83-Gz-kgE"/>
+                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="width" secondItem="Jma-c3-DIU" secondAttribute="width" id="CPW-7u-hEp"/>
                                             <constraint firstItem="Q59-FS-eCS" firstAttribute="centerX" secondItem="Jma-c3-DIU" secondAttribute="centerX" id="hp6-ee-na7"/>
                                             <constraint firstItem="Q59-FS-eCS" firstAttribute="centerY" secondItem="Jma-c3-DIU" secondAttribute="centerY" id="pKq-By-ic8"/>
-                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="height" relation="lessThanOrEqual" secondItem="Jma-c3-DIU" secondAttribute="height" id="qk8-qD-W36"/>
+                                            <constraint firstItem="Q59-FS-eCS" firstAttribute="height" secondItem="Jma-c3-DIU" secondAttribute="height" id="qk8-qD-W36"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="photo" destination="Q59-FS-eCS" id="Q5u-TU-iNw"/>

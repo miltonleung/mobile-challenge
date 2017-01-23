@@ -10,16 +10,25 @@ import UIKit
 
 class PhotoThumbnailCollectionViewCell: UICollectionViewCell {
   static let reuseIdentifier = "\(PhotoThumbnailCollectionViewCell.self)"
-
+  
   @IBOutlet fileprivate var photo: UIImageView! {
     didSet {
       self.photo.contentMode = .scaleAspectFit
     }
   }
   
-  var image: UIImage! {
+  var image: Photo! {
     didSet {
-      photo.image = image
+      DispatchQueue.global().async {
+        do {
+          let data = try Data(contentsOf: URL(string: self.image.thumbnailURL)!)
+          DispatchQueue.main.async {
+            self.photo.image = UIImage(data: data)
+          }
+        } catch let error as Error {
+          print(error)
+        }
+      }
     }
   }
 }
