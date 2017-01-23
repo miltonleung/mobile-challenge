@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -101,18 +102,36 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-xC-ayj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-ro-ssh">
+                                <rect key="frame" x="317" y="579" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlI-Y4-SQY">
+                                <rect key="frame" x="317" y="604" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bSF-AO-Txi" firstAttribute="top" secondItem="GlI-Y4-SQY" secondAttribute="bottom" constant="42" id="0xt-qt-rOe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GlI-Y4-SQY" secondAttribute="trailing" id="9Mt-oN-hnh"/>
                             <constraint firstAttribute="trailing" secondItem="wjK-xC-ayj" secondAttribute="trailing" id="BSk-Ea-eZl"/>
                             <constraint firstItem="wjK-xC-ayj" firstAttribute="top" secondItem="cGo-RX-FFy" secondAttribute="bottom" id="DSm-6R-Uh9"/>
                             <constraint firstItem="bSF-AO-Txi" firstAttribute="top" secondItem="wjK-xC-ayj" secondAttribute="bottom" id="Ko7-Es-Lru"/>
+                            <constraint firstItem="GlI-Y4-SQY" firstAttribute="top" secondItem="qxs-ro-ssh" secondAttribute="bottom" constant="4" id="RTx-EK-ybt"/>
                             <constraint firstItem="wjK-xC-ayj" firstAttribute="leading" secondItem="I25-NF-ckj" secondAttribute="leading" id="cfw-eS-4uS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qxs-ro-ssh" secondAttribute="trailing" id="xej-40-jk1"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="nameLabel" destination="qxs-ro-ssh" id="uY4-ef-8nr"/>
                         <outlet property="photo" destination="wjK-xC-ayj" id="nrC-EU-Ici"/>
+                        <outlet property="voteCount" destination="GlI-Y4-SQY" id="9c2-vb-LYr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvO-oz-Gxd" userLabel="First Responder" sceneMemberID="firstResponder"/>

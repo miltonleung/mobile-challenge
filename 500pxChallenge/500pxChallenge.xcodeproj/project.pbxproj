@@ -68,10 +68,10 @@
 			children = (
 				52900AB61E3578A1002FF804 /* AppDelegate.swift */,
 				52900AD21E3587E8002FF804 /* WebService.swift */,
-				52900AD01E3584AA002FF804 /* Controllers */,
+				52900ADA1E35BCE3002FF804 /* Models */,
 				52900AD11E3584B6002FF804 /* Views */,
+				52900AD01E3584AA002FF804 /* Controllers */,
 				52900ABA1E3578A1002FF804 /* Main.storyboard */,
-				52900ADA1E35BCE3002FF804 /* Model */,
 				52900ABD1E3578A1002FF804 /* Assets.xcassets */,
 				52900ABF1E3578A1002FF804 /* LaunchScreen.storyboard */,
 				52900AC21E3578A1002FF804 /* Info.plist */,
@@ -98,12 +98,12 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		52900ADA1E35BCE3002FF804 /* Model */ = {
+		52900ADA1E35BCE3002FF804 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				52900AD41E359924002FF804 /* Photo.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
