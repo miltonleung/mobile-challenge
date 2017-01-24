@@ -13,12 +13,40 @@ class ImageViewController: UIViewController {
   
   var image: Photo!
   
-  @IBOutlet fileprivate var photo: UIImageView!
+  var darkMode: Bool = false {
+    didSet {
+      if darkMode {
+        self.view.backgroundColor = UIColor.black
+        nameLabel.textColor = UIColor.white
+        voteCount.textColor = UIColor.white
+        navigationController?.setNavigationBarHidden(true, animated: true)
+      } else {
+        self.view.backgroundColor = UIColor.white
+        nameLabel.textColor = UIColor.black
+        voteCount.textColor = UIColor.black
+        navigationController?.setNavigationBarHidden(false, animated: true)
+      }
+    }
+  }
+  
+  @IBOutlet fileprivate var photo: UIImageView! {
+    didSet {
+      photo.isUserInteractionEnabled = true
+    }
+  }
   @IBOutlet fileprivate var nameLabel: UILabel!
   @IBOutlet fileprivate var voteCount: UILabel!
+}
+
+// MARK: Life Cycle
+extension ImageViewController {
+  override func viewWillAppear(_ animated: Bool) {
+    darkMode = false
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    navigationController?.setNavigationBarHidden(false, animated: true)
     nameLabel.text = image.name
     voteCount.text = "\(image.votes!) votes"
     WebService.request(endpoint: .PhotoByID(id: image.id), completion: { dictionary in
@@ -37,5 +65,12 @@ class ImageViewController: UIViewController {
         }
       }
     })
+  }
+}
+
+// MARK - IBAction
+extension ImageViewController {
+  @IBAction func imageViewTapped() {
+    darkMode = !darkMode
   }
 }

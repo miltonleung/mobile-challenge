@@ -101,6 +101,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="wjK-xC-ayj">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9bJ-jo-7rm" appends="YES" id="aac-2p-znv"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxs-ro-ssh">
                                 <rect key="frame" x="16" y="579" width="343" height="21"/>
@@ -137,6 +141,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CvO-oz-Gxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9bJ-jo-7rm">
+                    <connections>
+                        <action selector="imageViewTapped" destination="TW0-ak-sCF" id="fwI-QS-iyk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2535.1999999999998" y="123.68815592203899"/>
         </scene>
